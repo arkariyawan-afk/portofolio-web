@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portofolio - Arka Satriiyo Aji Priyawan</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Navigasi -->
+  <header>
+    <nav class="navbar">
+      <div class="logo">Arka.dev</div>
+      <div class="nav-actions">
+        <button id="themeToggle" class="theme-btn" aria-label="Ganti Tema">🌙</button>
+        <button class="nav-toggle" id="navToggle" aria-label="Menu">&#9776;</button>
+      </div>
+      <ul class="nav-menu" id="navMenu">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <!-- 1. Home / Hero Section -->
+    <section id="home" class="hero">
+      <div class="hero-content">
+        <p class="subtitle">Selamat Datang di Portofolio Saya</p>
+        <h1>Halo, saya <span>Arka Satriiyo Aji Priyawan</span></h1>
+        <p class="role">Junior Web Developer | Siswa XI TJKT 1 (Absen 09) - SMKN 1 Blitar</p>
+        <div class="hero-buttons">
+          <a href="#projects" class="btn primary">Lihat Proyek & Sertifikat</a>
+          <a href="#contact" class="btn secondary">Hubungi Saya</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- 2. About Me Section (Dengan Foto Profil) -->
+    <section id="about" class="about container">
+      <h2>Tentang Saya</h2>
+      <div class="about-grid">
+        <div class="about-profile-img">
+          <!-- Pastikan file profile.jpg ada di folder assets/img/ -->
+          <img src="pparka.jpeg" alt="Foto Profil Arka" class="profile-pic" onerror="this.src='https://via.placeholder.com/250?text=Foto+Profil'">
+        </div>
+        <div class="about-text">
+          <p>
+            Halo! Saya <strong>Arka Satriiyo Aji Priyawan</strong> (No. Absen 09), siswa kelas <strong>XI TJKT 1</strong> di <strong>SMKN 1 Blitar</strong>. Saya memiliki minat yang besar dalam bidang pengembangan web front-end serta perancangan antarmuka pengguna yang responsif.
+          </p>
+          <p>
+            Saya terus belajar dan mendalami HTML5, CSS3, JavaScript, serta pengelolaan sistem jaringan dan web untuk membangun aplikasi yang fungsional.
+          </p>
+          <div class="skill-badges">
+            <span class="badge">HTML5 Semantik</span>
+            <span class="badge">CSS3 / Flexbox / Grid</span>
+            <span class="badge">JavaScript (DOM)</span>
+            <span class="badge">Jaringan & Sistem</span>
+            <span class="badge">Git & GitHub</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. Portfolio & Sertifikat Section -->
+    <section id="projects" class="projects container">
+      <h2>Proyek & Sertifikat Pilihan</h2>
+      
+      <div class="filter-buttons">
+        <button class="filter-btn active" data-filter="all">Semua</button>
+        <button class="filter-btn" data-filter="web">Web App</button>
+        <button class="filter-btn" data-filter="sertifikat">Sertifikat</button>
+      </div>
+
+      <div class="project-grid" id="projectGrid">
+        <!-- Proyek 1 -->
+        <article class="project-card" data-category="web">
+          <div class="card-img">🌐</div>
+          <div class="card-body">
+            <span class="tag">Web App</span>
+            <h3>Website E-Commerce Katalog</h3>
+            <p>Aplikasi katalog toko online responsif dengan fitur keranjang belanja dan pencarian produk berbasis JavaScript.</p>
+            <a href="#" class="card-link">Lihat Demo &rarr;</a>
+          </div>
+        </article>
+
+        <!-- Sertifikat 1 -->
+        <article class="project-card" data-category="sertifikat">
+          <div class="card-img">📜</div>
+          <div class="card-body">
+            <span class="tag">Sertifikat 1</span>
+            <h3>Sertifikat Kompetensi Jaringan Dasar</h3>
+            <p>Sertifikat pelatihan administrasi perangkat jaringan dan konfigurasi router mikrotik dasar.</p>
+            <a href="#" class="card-link">Lihat Dokumen &rarr;</a>
+          </div>
+        </article>
+
+        <!-- Sertifikat 2 (Baru) -->
+        <article class="project-card" data-category="sertifikat">
+          <div class="card-img">🏆</div>
+          <div class="card-body">
+            <span class="tag">Sertifikat 2</span>
+            <h3>Sertifikat Frontend Web Development</h3>
+            <p>Sertifikat penyelesaian kursus pengembangan antarmuka web modern menggunakan HTML, CSS, dan JavaScript.</p>
+            <a href="#" class="card-link">Lihat Dokumen &rarr;</a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- 4. Contact Section -->
+    <section id="contact" class="contact container">
+      <h2>Hubungi Saya</h2>
+      <p class="contact-desc">Tertarik berkolaborasi atau memiliki pertanyaan? Kirimkan pesan melalui formulir di bawah ini.</p>
+      
+      <form id="contactForm" class="contact-form">
+        <input type="text" id="nama" placeholder="Nama Lengkap Pengirim" required>
+        <input type="email" id="email" placeholder="Alamat Email Pengirim" required>
+        <textarea id="pesan" rows="5" placeholder="Tulis pesan Anda..." required></textarea>
+        <button type="submit" class="btn primary">Kirim Pesan</button>
+      </form>
+      <p id="formFeedback" class="feedback-msg"></p>
+
+      <div class="social-links">
+        <a href="https://github.com" target="_blank">GitHub</a>
+        <a href="https://instagram.com" target="_blank">Instagram</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Arka Satriiyo Aji Priyawan (XI TJKT 1 - Absen 09). Dibuat untuk Tugas Praktik Mandiri.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
